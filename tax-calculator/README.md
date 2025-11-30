@@ -123,15 +123,13 @@ Enter your monthly income (LKR): 268000
 
 **Expected Output:**  
 Monthly Income : Rs. 268,000.00  
-Monthly Tax : Rs. 11,240.00
-
-Annual Income : Rs. 3,21,6000.00
+Monthly Tax : Rs. 11,240.00  
+Annual Income : Rs. 3,21,6000.00  
 Annual Tax : Rs. 134,880.00
 
-**Verification:**
-268,000 × 12 = 3,216,000
-Taxable = 3,216,000 − 1,800,000 = 1,416,000
-
-First 1,000,000 × 6% = 60,000
-Next 416,000 × 18% = 74,880
+**Verification:**  
+268,000 × 12 = 3,216,000  
+Taxable = 3,216,000 − 1,800,000 = 1,416,000  
+First 1,000,000 × 6% = 60,000  
+Next 416,000 × 18% = 74,880  
 Total annual tax = 134,880 → Correct!
