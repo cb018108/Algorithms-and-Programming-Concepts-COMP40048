@@ -118,17 +118,17 @@ Print all results → STOP
 
 ### 4) Example Test Case
 
-Input:
+**Input:**  
 Enter your monthly income (LKR): 268000
 
-Expected Output:
-Monthly Income : Rs. 268,000.00
+**Expected Output:**  
+Monthly Income : Rs. 268,000.00  
 Monthly Tax : Rs. 11,240.00
 
 Annual Income : Rs. 3,21,6000.00
 Annual Tax : Rs. 134,880.00
 
-Verification:
+**Verification:**
 268,000 × 12 = 3,216,000
 Taxable = 3,216,000 − 1,800,000 = 1,416,000
 
