@@ -19,73 +19,71 @@ As a first-year student, I learned to use basic Python like input, if-elif-else,
 
 ### 2) Pseudocode
 
-START
-INPUT monthly_income
-
-     annual_income ← monthly_income × 12
-     taxable ← annual_income − 1800000
-
-     IF taxable ≤ 0 THEN
-          annual_tax ← 0
-     ELSE
-          tax ← 0
-          remain ← taxable
-
-          // First 1,000,000 at 6%
-          IF remain > 1000000 THEN
-               tax ← tax + 1000000 × 0.06
-               remain ← remain − 1000000
-          ELSE
-               tax ← tax + remain × 0.06
-               remain ← 0
-          ENDIF
-
-          // Next 500,000 at 18%
-          IF remain > 500000 THEN
-               tax ← tax + 500000 × 0.18
-               remain ← remain − 500000
-          ELSE
-               IF remain > 0 THEN
-                    tax ← tax + remain × 0.18
-                    remain ← 0
+     START
+          INPUT monthly_income     
+          annual_income ← monthly_income × 12
+          taxable ← annual_income − 1800000
+     
+               IF taxable ≤ 0 THEN
+                    annual_tax ← 0
+               ELSE
+                    tax ← 0
+                    remain ← taxable
+          
+                    // First 1,000,000 at 6%
+                    IF remain > 1000000 THEN
+                         tax ← tax + 1000000 × 0.06
+                         remain ← remain − 1000000
+                    ELSE
+                         tax ← tax + remain × 0.06
+                         remain ← 0
+                    ENDIF
+          
+                    // Next 500,000 at 18%
+                    IF remain > 500000 THEN
+                         tax ← tax + 500000 × 0.18
+                         remain ← remain − 500000
+                    ELSE
+                         IF remain > 0 THEN
+                              tax ← tax + remain × 0.18
+                              remain ← 0
+                         ENDIF
+                    ENDIF
+          
+                    // Next 500,000 at 24%
+                    IF remain > 500000 THEN
+                         tax ← tax + 500000 × 0.24
+                         remain ← remain − 500000
+                    ELSE
+                         IF remain > 0 THEN
+                              tax ← tax + remain × 0.24
+                              remain ← 0
+                         ENDIF
+                    ENDIF
+          
+                    // Next 500,000 at 30%
+                    IF remain > 500000 THEN
+                         tax ← tax + 500000 × 0.30
+                         remain ← remain − 500000
+                    ELSE
+                         IF remain > 0 THEN
+                              tax ← tax + remain × 0.30
+                              remain ← 0
+                         ENDIF
+                    ENDIF
+          
+                    // Rest at 36%
+                    IF remain > 0 THEN
+                         tax ← tax + remain × 0.36
+                    ENDIF
+          
+                    annual_tax ← tax
                ENDIF
-          ENDIF
-
-          // Next 500,000 at 24%
-          IF remain > 500000 THEN
-               tax ← tax + 500000 × 0.24
-               remain ← remain − 500000
-          ELSE
-               IF remain > 0 THEN
-                    tax ← tax + remain × 0.24
-                    remain ← 0
-               ENDIF
-          ENDIF
-
-          // Next 500,000 at 30%
-          IF remain > 500000 THEN
-               tax ← tax + 500000 × 0.30
-               remain ← remain − 500000
-          ELSE
-               IF remain > 0 THEN
-                    tax ← tax + remain × 0.30
-                    remain ← 0
-               ENDIF
-          ENDIF
-
-          // Rest at 36%
-          IF remain > 0 THEN
-               tax ← tax + remain × 0.36
-          ENDIF
-
-          annual_tax ← tax
-     ENDIF
-
-     monthly_tax ← annual_tax ÷ 12
-
-     OUTPUT monthly_income, annual_income, annual_tax, monthly_tax
-
-STOP
+     
+          monthly_tax ← annual_tax ÷ 12
+     
+          OUTPUT monthly_income, annual_income, annual_tax, monthly_tax
+     STOP
 
 ### 3) Flowchart
 
@@ -120,20 +118,18 @@ Print all results → STOP
 
 ### 4) Example Test Case
 
-Input:
+**Input:**  
 Enter your monthly income (LKR): 268000
 
-Expected Output:
-Monthly Income : Rs. 268,000.00
-Monthly Tax : Rs. 11,240.00
-
-Annual Income : Rs. 3,21,6000.00
+**Expected Output:**  
+Monthly Income : Rs. 268,000.00  
+Monthly Tax : Rs. 11,240.00  
+Annual Income : Rs. 3,21,6000.00  
 Annual Tax : Rs. 134,880.00
 
-Verification:
-268,000 × 12 = 3,216,000
-Taxable = 3,216,000 − 1,800,000 = 1,416,000
-
-First 1,000,000 × 6% = 60,000
-Next 416,000 × 18% = 74,880
+**Verification:**  
+268,000 × 12 = 3,216,000  
+Taxable = 3,216,000 − 1,800,000 = 1,416,000  
+First 1,000,000 × 6% = 60,000  
+Next 416,000 × 18% = 74,880  
 Total annual tax = 134,880 → Correct!
